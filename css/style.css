@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+     padding: 0;
+box-sizing: border-box;
+}
+
+header{
+    width: 100dvw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 0rem 1rem;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+.bar-1,.bar-2,.bar-3{
+    width: 30px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: white;
+}
+.sec-two{
+  
+  width: 300px;
+  
+}
+input{
+    color: white;
+    padding: 0rem 1rem;
+    border: none;
+    width: 290px;
+    height: 30px;
+    border-radius: 15px;
+    background-color:#1d1d1d;
+    filter: blur(100%);
+    outline: none;
+}
+input:hover{
+border:none
+
+}
+
+
+.sec-three{
+   
+    width: 100vw;
+    height: 250px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-container{
+    width: 350px;
+    height: 200px;
+    background-color: #1d1d1d;
+    border-radius:15px ;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory ;
+}
+
+.slider{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    scroll-snap-align: center;
+ 
+ 
+}
+
+#animate{
+
+    display: flex;
+    transition: transform 1.6s ease; 
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+.sec-four{
+    width: 100dvw;
+    height: 100dvh;
+    background-color:#1d1d1d;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    transform: translateX(-420px);
+    transition: transform 0.5s ease-in;
+}
+
+.list{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.nav-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 90%;
+    gap:30px ;
+}
+
+
+.navigation{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ex-box{
+    width: 100%;
+    height: 10%;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-button{
+    width: 50px;
+    height: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-one,.bottom-one{
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.top-one{
+    transform:translateY(4px) rotate(45deg);
+    
+}
+.bottom-one{
+    transform: rotate(-45deg);
+}
