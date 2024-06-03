@@ -53,3 +53,25 @@ openbtn.addEventListener("click",function(){
 closebtn.addEventListener("click",function(){
     nav.style.transform="translateX(-420px)"
 })
+
+
+
+import { gamevideo } from "./script/product.js"
+var container_box=document.querySelector(".inner-container")
+ let html;
+gamevideo.forEach((gameFile)=>{
+
+    html=`
+                <a href="" class="box">
+                    <img class="games-image" src="${gameFile.image}" width="100" height="100">
+
+                        <div class="name">
+                         <p>${gameFile.name}</p>
+                         <p style="color:green; text-align:end;">${gameFile.rate}</p>
+                        </div>
+                </a>
+               
+            `
+
+            container_box.innerHTML+=html
+}) 

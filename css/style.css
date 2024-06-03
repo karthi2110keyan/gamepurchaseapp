@@ -162,3 +162,54 @@ a{
 .bottom-one{
     transform: rotate(-45deg);
 }
+
+
+
+
+
+/* main body page */
+
+
+
+.container{
+    margin-top: 1rem;
+    width: 100dvw;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-container{
+    width: 390px;
+    height: 250px;
+    overflow-x:scroll;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.box{
+    min-width: 165px;
+    height: 230px;
+   
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.games-image{
+    width: 165px;
+    height: 230px;
+   border-radius:5px ;
+    object-fit:contain ;
+}
+.name{
+    position: absolute;
+      filter: blur(60%);
+    bottom: 0;
+    right: 0;
+}
+p{
+    color: white;
+  
+}
