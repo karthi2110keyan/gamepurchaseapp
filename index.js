@@ -55,23 +55,65 @@ closebtn.addEventListener("click",function(){
 })
 
 
-
+import { Cart } from "./script/cart.js"
 import { gamevideo } from "./script/product.js"
 var container_box=document.querySelector(".inner-container")
  let html;
 gamevideo.forEach((gameFile)=>{
 
     html=`
-                <a href="" class="box">
-                    <img class="games-image" src="${gameFile.image}" width="100" height="100">
-
-                        <div class="name">
-                         <p>${gameFile.name}</p>
-                         <p style="color:green; text-align:end;">${gameFile.rate}</p>
-                        </div>
-                </a>
+    <div class="box">
+    <a class="image-box" href="${gameFile.location}"><img class="games-image" src="${gameFile.image}" width="100" height="100"><p class="para">${gameFile.name}</p></a>
+    
+                 <div class="name">
+                  
+                  <p style="color:green; text-align:end;">${gameFile.rate}</p>
+                </div>
+        
+        <div class="buying-box">
+        <a href="" class="buy">BUY</a>
+        <button class="cart-button" data-product-id="${gameFile.id}" >CART</button>
+        </div>
+    </div>
+            </div>
                
             `
 
             container_box.innerHTML+=html
 }) 
+
+
+var quantity;
+var cart_box=document.querySelector(".cart-count")
+var cart_btn=document.querySelectorAll(".cart-button")
+let matchingitem;
+cart_btn.forEach((cart_button)=>{
+    cart_button.addEventListener("click",function(){
+      
+        Cart.forEach((crt)=>{
+            if(crt.productid===cart_button.dataset.productId){
+                matchingitem=crt
+            }
+        })
+
+if(matchingitem){
+    matchingitem.quantity+=1
+}else{
+        Cart.push({
+            productid:cart_button.dataset.productId,
+            quantity:1
+        })
+    }
+        
+        let totalQuntity=0;
+        Cart.forEach((quntities)=>{
+        totalQuntity+=quntities.quantity
+           
+
+        })
+         cart_box.innerHTML=totalQuntity
+})
+
+
+
+})

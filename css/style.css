@@ -13,7 +13,7 @@ header{
     padding: 0rem 1rem;
 }
 
-.nav-icon{
+.nav-icon,.sec-two-two{
     display: flex;
     align-items: center;
     justify-content:center;
@@ -29,16 +29,36 @@ header{
     border-radius: 15px;
     background-color: white;
 }
+.sec-two-two{
+   background-image: url(../image/icons8-bag-64.png); 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 45px;
+   position: relative;
+   z-index: -1;
+}
+.cart-count{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius:5px ;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid gray;
+}
 .sec-two{
   
-  width: 300px;
+  width: 250px;
   
 }
 input{
     color: white;
     padding: 0rem 1rem;
     border: none;
-    width: 290px;
+    width: 250px;
     height: 30px;
     border-radius: 15px;
     background-color:#1d1d1d;
@@ -100,7 +120,7 @@ border:none
     height: 100dvh;
     background-color:#1d1d1d;
     position: absolute;
-    z-index: 1;
+    z-index: 999;
     top: 0;
     transform: translateX(-420px);
     transition: transform 0.5s ease-in;
@@ -133,30 +153,33 @@ a{
 .ex-box{
     width: 100%;
     height: 10%;
-    
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: flex-end;
 }
 
 .close-button{
+    
     width: 50px;
     height: 50px;
-    
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     display: flex;
+    border-radius: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .top-one,.bottom-one{
-    width: 40px;
+    width: 35px;
     height: 5px;
     background-color: white;
     border-radius: 10px;
 }
 
 .top-one{
-    transform:translateY(4px) rotate(45deg);
+    transform:translateY(5px) rotate(45deg);
     
 }
 .bottom-one{
@@ -171,45 +194,115 @@ a{
 
 
 
-.container{
-    margin-top: 1rem;
+.container-one{
+   margin-top: 0.3rem;
     width: 100dvw;
-    height: 250px;
+    height: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .inner-container{
-    width: 390px;
+    width: 360px;
     height: 250px;
     overflow-x:scroll;
     display: flex;
+
     gap: 10px;
     align-items: center;
 }
 
 .box{
     min-width: 165px;
-    height: 230px;
+    height: 250px;
    
     border-radius: 4px;
     position: relative;
 
 }
-
+.image-box{
+    width: 250px;
+    height: 0px;
+    border-radius: 10px;
+}
 .games-image{
     width: 165px;
-    height: 230px;
-   border-radius:5px ;
-    object-fit:contain ;
+    height: 150px;
+   border-radius:10px ;
+   object-fit: cover;
 }
 .name{
-    position: absolute;
-      filter: blur(60%);
-    bottom: 0;
-    right: 0;
+    text-align: end;
+    
+}
+.para{
+position: absolute;
+bottom: 100px;
+z-index: 1;
+backdrop-filter: blur(30px);
+box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+border: 2px solid rgba(225,225,225,0.1);
+color: black;
+padding: 0.1rem;
+border-radius: 5px;
 }
 p{
     color: white;
-  
+  text-wrap: wrap;
 }
+
+
+/* ------------ */
+
+.cat-box{
+    width: 370px;
+    height: 180px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.cat{
+    width: 150px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: white;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0.8);
+    transition: transform 0.1s ease-in;
+}
+.cat:nth-child(1){
+    background-image: url(../image/console.jpg);
+}
+.cat:nth-child(2){
+    background-image: url(../image/joy.jpg);
+    background-size: cover;
+}
+.cat:hover{
+    transform: scale(0.9);
+}
+
+
+/* ------------------cart and buy button style----------------- */
+
+
+.buying-box{
+    width: 100%;
+  
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+}
+
+.buy,.cart-button{
+padding: 0.2rem 0.5rem;
+background-color: white;
+border-radius: 5px;
+border: none;
+color: black;
+
+}
+

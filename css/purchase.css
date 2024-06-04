@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-box{
+    width: 100dvw;
+    height: 80px;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video{
+    
+    width: 100%;
+    height:350px;
+    overflow: hidden;
+}
+
+.simple-box{
+    width: 100dvw;
+    height: 150px;
+}
+li{
+    list-style: none;
+}
+.heading{
+    font-size: 1.5rem;
+    color: white;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.unorder{
+    padding:2rem 1rem;
+
+
+}
+
+
+.list-para{
+    font-size: 1.3rem;
+    text-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.article-box{
+    width: 100dvw;
+    height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cover-box{
+    width: 350px;
+    height: 250px;
+    backdrop-filter: blur(30px);
+box-shadow: 0px 0px 30px rgba(227,228,237,0.1);
+border: 2px solid rgba(225,225,225,0.1);
+}
+
+.article{
+    
+    color:white;
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    padding: 1rem;
+}
+
+.purchase-box{
+    width: 100dvw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-page-one{
+    width: 350px;
+   
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.box-one{
+    width: 150px;
+    height: 290px;
+   
+}
+
+.box-two{
+     width: 170px;
+    height: 290px;
+    
+    border-left: 1px solid white; 
+}
+
+.amount-list{
+    padding: 1rem;
+    color: WHITE;
+    text-align: center;
+}
+
+
+.amount-amount{
+    color: green;
+    text-align: end;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
